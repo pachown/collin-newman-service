@@ -1,8 +1,8 @@
 /* eslint-disable no-console */
 // eslint-disable-next-line import/no-extraneous-dependencies
 const Faker = require('faker');
-const Reviews = require('../../database/Reviews.js');
-const db = require('../../database/index');
+const Reviews = require('../database/Reviews.js');
+const db = require('../database/index');
 const mongoose = require('mongoose');
 const fetch = require('node-fetch');
 const reviewsByLanguage = require('./sampleData.js');
@@ -14,7 +14,7 @@ const generateData = () => {
     .then((fakeUsers) => {
       Reviews.remove((err) => {
         if (err) {
-          console.log(Err);
+          console.log(err);
         } else {
           console.log('Database dropped');
         }

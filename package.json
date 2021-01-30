@@ -8,8 +8,8 @@
     "test:watch": "jest --watch --verbose",
     "test:coverage": "jest --verbose --coverage --colors",
     "scrape": "node ./dev/unsplashScraper/scrape.js",
-    "seed": "node ./dev/database/seed.js",
-    "start": "nodemon ./server/server.js",
+    "seed": "node ./seeding/seed.js",
+    "start": "node seeding/seed.js && node server/server.js",
     "react:dev": "webpack --watch",
     "webpack": "webpack --json > analysis.json",
     "lint": "./node_modules/.bin/eslint . --ignore-path ./.eslintignore"
@@ -69,7 +69,6 @@
     "faker": "^5.1.0",
     "file-loader": "^6.2.0",
     "jest-cli": "^26.6.3",
-    "nodemon": "^2.0.7",
     "react-addons-test-utils": "^15.6.2",
     "regenerator-runtime": "^0.13.7",
     "style-loader": "^2.0.0",
